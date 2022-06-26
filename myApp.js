@@ -16,4 +16,12 @@ app.get("/json",(req,res) => {
   
 });
 
+app.get("/json/_api/use-env-vars",(req,res) => {
+
+    let response = process.env.MESSAGE_STYLE;
+
+    return res.json({"MESSAGE_STYLE":"uppercase" })
+    
+  });
+
  module.exports = app;
